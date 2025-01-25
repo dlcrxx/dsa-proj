@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIT-SIS Module</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .left {
+            background-color: #800000;
+            color: white;
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .left form {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            position: relative;
+        }
+
+        .left form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .left form .password-eye {
+            position: absolute;
+            right: 10px;  /* Position the icon inside the input field */
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .left form input[type="checkbox"] {
+            display: none; /* Hide the checkbox */
+        }
+
+        .left form input[type="checkbox"]:checked ~ .password-field input[type="password"] {
+            display: none;
+        }
+
+        .left form input[type="checkbox"]:checked ~ .password-field input[type="text"] {
+            display: block;
+        }
+
+        .left form button {
+            background-color: #006666;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .right {
+            flex: 1;
+            background: url('./photoused/6075524196072538068.jpg') no-repeat center center/cover;
+            background-size: 100%;
+        }
+
+        .right::before {
+            position: absolute;
+            top: 50%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: white;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid white; 
+            padding-bottom: 10px; 
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        .header-text {
+            color: white;
+            margin-left: 15px; 
+        }
+
+        .header-text h1 {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .header-text p {
+            font-size: 1rem;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="logo">
+                <img src="./photoused/PUPLogo.png" alt="PUP Logo">
+                <div class="header-text">
+                    <h1>POLYTECHNIC UNIVERSITY OF THE PHILIPPINES</h1>
+                    <p>INSTITUTE OF TECHNOLOGY</p>
+                </div>
+            </div>
+            <h1>DIT-SIS MODULE</h1>
+            <form>
+                <input type="text" placeholder="Username" required>
+                
+                <div class="password-field" style="position: relative;">
+                    <input type="password" id="password" placeholder="Password" required>
+                    <input type="text" id="password-text" placeholder="Password" style="display: none;">
+                    <label for="show-password" class="password-eye">
+                  
+                    </label>
+                    <input type="checkbox" id="show-password">
+                </div>
+                <button type="submit">Log In</button>
+            </form>
+        </div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>
